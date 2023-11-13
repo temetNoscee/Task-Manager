@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify</title>
+    <link rel="icon" type="image/x-icon" href="\client\images\Favicon.png">
+
+</head>
+<body>
+    <div id="nav">
+        <img src="\client\images\Favicon.png" alt="Logo">
+        <h1>Taskify</h1>
+    </div>
+    
+    <h2 id="homepage-message">Hi ------</h2>
+    <button>New task</button>
+    <ul id="tasks"></ul>
+    
+
+    <div id="addTask">
+        <h3><b>Add Task</b></h3>
+        <button id="close-btn" onclick="removeBlur()">X</button>
+        <label for="title">Title</label>
+        <input type="text" placeholder="Title...">
+        <br>
+        <label for="body">Task Body</label>
+        <textarea name="body" id="body" cols="30" rows="10"></textarea>
+        <br>
+        <button id="add-task">Add Task</button>
+        <p id="error"></p>
+    </div>
+
+    
+</body>
+</html>
