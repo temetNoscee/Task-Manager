@@ -28,6 +28,38 @@ header{
     z-index: 99;
 }
 
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+    padding: 50px;
+    width: 100%;
+}
+
+.col-1, .col-2{
+    flex-basis: 50%;
+    position: relative;
+    margin-left: 100px;
+}
+
+.col-1 h2{
+    font-size: 54px;
+    color: antiquewhite;
+}
+
+.col-1 h3{
+    font-size: 30px;
+    color:#b5b3b3;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+
+.col-2{
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: 200;
+}
 .taskify{
     color:#fff;
     user-select: none;
@@ -85,7 +117,7 @@ header{
 
 .popup{
     position:relative;
-    display: flex;
+    display: none;
     width:400px;
     height: 440px;
     background: transparent;
@@ -95,11 +127,16 @@ header{
     box-shadow: 0 0 30px rgba(0,0,0, .5) ;
     justify-content: center;
     align-items: center;
-    /* overflow:hidden; */
-    transition: height .2s ease ;
+    overflow:hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease ;
 }
 
-.popup .active{
+.popup.active-popup {
+    transform: scale(1);
+}
+
+.popup.active{
     height: 520px;
 }
 
@@ -108,13 +145,25 @@ header{
     padding: 40px;
 }
 
-/* .popup .form.login{
-    display: none;
-} */
+.popup .form.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.popup.active .form.login{
+    transition: none;
+    transform: translateX(-400px);
+}
 
 .popup .form.signup{
     position: absolute;
+    transition: none;
     transform: translateX(400px);
+}
+
+.popup.active .form.signup{
+    transition: transform .18s ease;
+    transform: translateX(0);
 }
 
 .form h2{
