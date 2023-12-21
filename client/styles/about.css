@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/images/try1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.taskify{
+    color:#fff;
+    user-select: none;
+    font-size: 2em;
+}
+
+h1{
+    text-align: left;
+    width: 100%;
+    padding-left: 10rem;
+    margin-top: 20px;
+}
+
+p{
+    padding: 0 10rem;
+}

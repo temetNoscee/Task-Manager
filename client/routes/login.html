@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskify</title>
-    <link rel="icon" type="image/png" href="/client/images/Favicon.png">
-    <link rel="stylesheet" href="/client/styles/login.css">
+    <link type="image/png" sizes="128x128" rel="icon" href="https://img.icons8.com/material/24/FFFFFF/task-completed.png" alt="checked">
+    <link rel="stylesheet" href="/styles/login.css">
+    
 </head>
 <body>
     <header>
         <h2 class="taskify">Taskify</h2>
         <nav class="nav">
-            <a href="#">About</a>
+            <a href="/routes/about.html" id="about">About</a>
             <a href="#">Contact</a>
             <button id="btnLoginNav">Login </button>
         </nav>
@@ -27,51 +28,51 @@
 
     <!-- ----------------Log In---------------------- -->
     <div class="popup">
-        <span class="closeBtn"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/delete-sign.png" alt="delete-sign"/>
+        <span class="closeBtn"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/EBEBEB/delete-sign.png" alt="delete-sign"/>
         </span>
         <div class="form login">
             <h2>Login</h2>
-            <form action="#">
+            <form action="/login">
                 <div class="input-box">
-                    <span class="icon"><img width="24" height="24" src="https://img.icons8.com/material/24/mail.png" alt="mail"/></span>
-                    <label for="email">Email</label></span>
-                    <input type="email" name="email" id="email" placeholder="Enter your email adress...">
+                    <span class="icon"><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/EBEBEB/mail.png" alt="mail"/></span>
+                    <label for="l-email">Email</label>
+                    <input type="email" name="l-email" id="l-email" placeholder="Enter your email address...">
                 </div>
                 <div class="input-box">
-                   <span class="icon"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/lock--v1.png" alt="lock--v1"/></span>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password..." required>
+                   <span class="icon"><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/EBEBEB/lock--v1.png" alt="lock--v1"/></span>
+                    <label for="l-password">Password</label>
+                    <input type="password" name="l-password" id="l-password" placeholder="Enter your password..." required>
                 </div>
-                <div id="error-message">aaa</div>
-                <button id="loginbtn">Log In</button>
+                <div class="error-message" id="login-error"></div>
+                <button class="loginbtn">Log In</button>
             </form>
             <div class="creAcc">
                 <p>Don't have an account yet? <a href="#" class="signupNav">Create an account</a></p>
             </div>
         </div>
 
-        <!-- ----------------Sıgn Up---------------------- -->
+        <!-- ----------------Sign Up---------------------- -->
 
         <div class="form signup">
             <h2>Sign Up</h2>
             <form action="#">
                 <div class="input-box">
-                    <span class="icon"><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/name.png" alt="name"/></span>
-                    <label for="username">Username</label></span>
-                    <input type="text" name="username" id="username" placeholder="Enter your username...">
+                    <span class="icon"><img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/EBEBEB/user--v1.png" alt="name"/></span>
+                    <label for="s-username">Username</label></span>
+                    <input type="text" name="s-username" id="s-username" placeholder="Enter your username...">
                 </div>
                 <div class="input-box">
-                    <span class="icon"><img width="24" height="24" src="https://img.icons8.com/material/24/mail.png" alt="mail"/></span>
-                    <label for="email">Email</label></span>
-                    <input type="email" name="email" id="email" placeholder="Enter your email adress...">
+                    <span class="icon"><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/EBEBEB/mail.png" alt="mail"/></span>
+                    <label for="s-email">Email</label>
+                    <input type="email" name="s-email" id="s-email" placeholder="Enter your email adress...">
                 </div>
                 <div class="input-box">
-                   <span class="icon"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/lock--v1.png" alt="lock--v1"/></span>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password..." required>
+                   <span class="icon"><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/EBEBEB/lock--v1.png" alt="lock--v1"/></span>
+                    <label for="s-password">Password</label>
+                    <input type="password" name="s-password" id="s-password" placeholder="Enter your password..." required>
                 </div>
-                <div id="error-message">aaa</div>
-                <button id="loginbtn">Sign Up</button>
+                <div class="error-message" id="signup-error"></div>
+                <button class="signbtn">Sign Up</button>
             </form>
             <div class="creAcc">
                 <p>Already have an account? <a href="#" class="loginNav">Log in</a></p>
@@ -80,12 +81,16 @@
     </div>
 
 
-    <script type="application/javascript" src="/client/assets/login.js"></script>
+
+    <script type="application/javascript" src="/assets/login.js"></script>
     <div class= footer>
         <a  href="https://icons8.com/icon/59825/lock">Lock</a> icon by <a href="https://icons8.com">Icons8</a>
         <a  href="https://icons8.com/icon/86862/mail">Mail</a> icon by <a href="https://icons8.com">Icons8</a>
         <a  href="https://icons8.com/icon/71200/close">Close</a> icon by <a href="https://icons8.com">Icons8</a>
         <a  href="https://icons8.com/icon/83151/name">Name</a> icon by <a href="https://icons8.com">Icons8</a>
+        <a  href="https://icons8.com/icon/15263/account">Account</a> icon by <a href="https://icons8.com">Icons8</a>
     </div>
+
+    
     </body>
 </html>
